@@ -1,34 +1,42 @@
-import { Component } from "react";
-import Movies from "../components/Movies";
-import Preloader from "../components/Preloader";
-import Search from "../components/Search";
+import { Component } from 'react';
+import Movies from '../components/Movies';
+import Preloader from '../components/Preloader';
+import Search from '../components/Search';
 
 class Main extends Component {
-	state = {
-		movies: []
-	}
+  state = {
+    movies: [],
+    loading: true,
+  };
 
-	componentDidMount() {
-		fetch('http://www.omdbapi.com/?apikey=ae6de1b6&s=matrix')
-			.then(response => response.json())
-			.then(data => this.setState({movies: data.Search}))
-	}
+  componentDidMount() {
+    fetch('http://www.omdbapi.com/?apikey=ae6de1b6&s=matrix')
+      .then((response) => response.json())
+      .then((data) => this.setState({ movies: data.Search, loading: false }));
+  }
 
-	updateMoviesFromSearch = (str) => {
-		fetch(`http://www.omdbapi.com/?apikey=ae6de1b6&s=${str}`)
-			.then(response => response.json())
-			.then(data => this.setState({movies: data.Search}))
-	}
+  updateMoviesFromSearch = (str, type = 'all') => {
+    this.setState({ loading: true });
+    let link = '';
+    if (type === 'all') {
+      link = `http://www.omdbapi.com/?apikey=ae6de1b6&s=${str}`;
+    } else {
+      link = `http://www.omdbapi.com/?apikey=ae6de1b6&type=${type}&s=${str}`;
+    }
+    fetch(link)
+      .then((response) => response.json())
+      .then((data) => this.setState({ movies: data.Search, loading: false }));
+  };
 
-	render() {
-		const {movies} = this.state;
-		return(
-			<main className="container content">
-				<Search updateMoviesFromSearch={this.updateMoviesFromSearch}/>
-				{movies.length ? <Movies movies={movies}/> : <Preloader/>}
-			</main>
-		)
-	}
+  render() {
+    const { movies, loading } = this.state;
+    return (
+      <main className="container content">
+        <Search updateMoviesFromSearch={this.updateMoviesFromSearch} />
+        {loading ? <Preloader /> : <Movies movies={movies} />}
+      </main>
+    );
+  }
 }
 
 export default Main;

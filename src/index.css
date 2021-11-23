@@ -27,3 +27,7 @@ nav {
 	top: 0;
 	right: 0.5rem;
 }
+
+.input-field label {
+	margin-right: 30px;
+}
