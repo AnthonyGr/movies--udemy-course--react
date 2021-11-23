@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/movies--udemy-course--react/static/css/main.5cd72d74.chunk.css",
+    "main.js": "/movies--udemy-course--react/static/js/main.c6ae3811.chunk.js",
+    "main.js.map": "/movies--udemy-course--react/static/js/main.c6ae3811.chunk.js.map",
+    "runtime-main.js": "/movies--udemy-course--react/static/js/runtime-main.5ef05d60.js",
+    "runtime-main.js.map": "/movies--udemy-course--react/static/js/runtime-main.5ef05d60.js.map",
+    "static/js/2.0f0e0c1f.chunk.js": "/movies--udemy-course--react/static/js/2.0f0e0c1f.chunk.js",
+    "static/js/2.0f0e0c1f.chunk.js.map": "/movies--udemy-course--react/static/js/2.0f0e0c1f.chunk.js.map",
+    "index.html": "/movies--udemy-course--react/index.html",
+    "static/css/main.5cd72d74.chunk.css.map": "/movies--udemy-course--react/static/css/main.5cd72d74.chunk.css.map",
+    "static/js/2.0f0e0c1f.chunk.js.LICENSE.txt": "/movies--udemy-course--react/static/js/2.0f0e0c1f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ef05d60.js",
+    "static/js/2.0f0e0c1f.chunk.js",
+    "static/css/main.5cd72d74.chunk.css",
+    "static/js/main.c6ae3811.chunk.js"
+  ]
+}
