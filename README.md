@@ -6,6 +6,11 @@
 - Cтили: [Materialize CSS](https://materializecss.com/)
 - API для поиска: [OMDb API](https://www.omdbapi.com/)
 
+## Функционал:
+-
+-
+-
+
 ## Установка проекта:
 npm install
 
